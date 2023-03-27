@@ -1,22 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import ZIPCodeForm from './components/ZIPCodeForm/ZIPCodeForm'
+import WeatherGraphic from './components/WeatherGraphic/WeatherGraphic'
+import Temperature from './components/Temperature/Temperature'
 
+const initialState = {
+  input: '',
+  imageURL: '',
+  weather: ''
+}
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        
+        <WeatherGraphic />
+        <Temperature />
+        <ZIPCodeForm 
+          /*onInputChange={this.onInputChange} 
+          onButtonSubmit={this.onButtonSubmit} *//>
       </header>
     </div>
   );
