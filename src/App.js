@@ -26,7 +26,8 @@ class App extends React.Component {
   }
   
   onButtonSubmit = () => {
-
+    
+    console.log(process.env.API_KEY)
     const options = {
       method: 'GET',
       url: 'https://weatherapi-com.p.rapidapi.com/forecast.json',
