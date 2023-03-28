@@ -1,6 +1,7 @@
 import './App.css'
 import axios from 'axios'
 import CityName from './components/CityName/CityName'
+import Config from './config.json'
 import React from 'react'
 import Temperature from './components/Temperature/Temperature'
 import WeatherGraphic from './components/WeatherGraphic/WeatherGraphic'
@@ -29,13 +30,12 @@ class App extends React.Component {
   
   onButtonSubmit = () => {
     
-    console.log(process.env.API_KEY)
     const options = {
       method: 'GET',
       url: 'https://weatherapi-com.p.rapidapi.com/forecast.json',
       params: {q: this.state.input, days: '1'},
       headers: {
-        'X-RapidAPI-Key': API_KEY,
+        'X-RapidAPI-Key': Config.API_KEY,
         'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
       }
     };
