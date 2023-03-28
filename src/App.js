@@ -15,6 +15,8 @@ const initialState = {
   weather: 'Sunny'
 }
 
+const API_KEY = process.env.API_KEY
+
 class App extends React.Component {
   constructor() {
     super()
@@ -33,7 +35,7 @@ class App extends React.Component {
       url: 'https://weatherapi-com.p.rapidapi.com/forecast.json',
       params: {q: this.state.input, days: '1'},
       headers: {
-        'X-RapidAPI-Key': process.env.API_KEY,
+        'X-RapidAPI-Key': API_KEY,
         'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
       }
     };
