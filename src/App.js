@@ -1,7 +1,7 @@
 import './App.css'
 import axios from 'axios'
 import CityName from './components/CityName/CityName'
-import Config from '../etc/secrets/config.json'
+import Config from './Config.json'
 import React from 'react'
 import Temperature from './components/Temperature/Temperature'
 import WeatherGraphic from './components/WeatherGraphic/WeatherGraphic'
@@ -15,8 +15,6 @@ const initialState = {
   city: 'Oceanside',
   weather: 'Sunny'
 }
-
-const API_KEY = process.env.API_KEY
 
 class App extends React.Component {
   constructor() {
