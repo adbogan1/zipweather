@@ -1,7 +1,7 @@
 import './App.css'
 import axios from 'axios'
 import CityName from './components/CityName/CityName'
-import Config from './config.json'
+import Config from '../etc/secrets/config.json'
 import React from 'react'
 import Temperature from './components/Temperature/Temperature'
 import WeatherGraphic from './components/WeatherGraphic/WeatherGraphic'
