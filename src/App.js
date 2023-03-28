@@ -1,7 +1,6 @@
 import './App.css'
 import axios from 'axios'
 import CityName from './components/CityName/CityName'
-import Config from './Config.json'
 import React from 'react'
 import Temperature from './components/Temperature/Temperature'
 import WeatherGraphic from './components/WeatherGraphic/WeatherGraphic'
@@ -33,7 +32,7 @@ class App extends React.Component {
       url: 'https://weatherapi-com.p.rapidapi.com/forecast.json',
       params: {q: this.state.input, days: '1'},
       headers: {
-        'X-RapidAPI-Key': Config.API_KEY,
+        'X-RapidAPI-Key': '11dfc2446emsh483e7b19f8f92c2p15d69fjsn08addc5ee5b1',
         'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
       }
     };
